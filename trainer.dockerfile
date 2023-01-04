@@ -13,5 +13,6 @@ COPY data/ data/
 
 WORKDIR /
 RUN pip install -r requirements.txt --no-cache-dir
+RUN make data
 
 ENTRYPOINT ["python", "-u", "src/models/train_model.py"]
