@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# mlops_day2 documentation build configuration file, created by
+# dtu_mlops_cookiecutter documentation build configuration file, created by
 # sphinx-quickstart.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -41,7 +41,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'mlops_day2'
+project = u'dtu_mlops_cookiecutter'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -164,7 +164,7 @@ html_static_path = ['_static']
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'mlops_cookiecutterdoc'
+htmlhelp_basename = 'dtu_mlops_cookiecutterdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -184,9 +184,9 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
     ('index',
-     'mlops_cookiecutter.tex',
-     u'mlops_day2 Documentation',
-     u"Siddhi", 'manual'),
+     'dtu_mlops_cookiecutter.tex',
+     u'dtu_mlops_cookiecutter Documentation',
+     u"alaym3", 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -215,8 +215,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'mlops_cookiecutter', u'mlops_day2 Documentation',
-     [u"Siddhi"], 1)
+    ('index', 'dtu_mlops_cookiecutter', u'dtu_mlops_cookiecutter Documentation',
+     [u"alaym3"], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -229,9 +229,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    ('index', 'mlops_cookiecutter', u'mlops_day2 Documentation',
-     u"Siddhi", 'mlops_day2',
-     'Using the cookiecutter template for a project', 'Miscellaneous'),
+    ('index', 'dtu_mlops_cookiecutter', u'dtu_mlops_cookiecutter Documentation',
+     u"alaym3", 'dtu_mlops_cookiecutter',
+     'Cookiecutter template for ML Ops', 'Miscellaneous'),
 ]
 
 # Documents to append as an appendix to all manuals.

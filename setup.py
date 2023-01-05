@@ -4,7 +4,7 @@ setup(
     name='src',
     packages=find_packages(),
     version='0.1.0',
-    description='Using the cookiecutter template for a project',
-    author='Siddhi',
+    description='Cookiecutter template for ML Ops',
+    author='alaym3',
     license='MIT',
 )

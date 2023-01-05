@@ -1,9 +1,9 @@
-.. mlops_day2 documentation master file, created by
+.. dtu_mlops_cookiecutter documentation master file, created by
    sphinx-quickstart.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-mlops_day2 documentation!
+dtu_mlops_cookiecutter documentation!
 ==============================================
 
 Contents:
