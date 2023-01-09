@@ -55,6 +55,11 @@ jobs:
         pip install pytest
         pytest -v
 
+    - name: Library cleaning with black
+      run: |
+        pip install black
+        black .
+
     - name: Library sorting with isort
       run: |
         pip install isort
