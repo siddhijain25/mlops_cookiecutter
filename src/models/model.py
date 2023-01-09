@@ -32,6 +32,10 @@ class MyAwesomeModel(nn.Module):
             log_probs: tensor with log probabilities with shape [N, 10]
 
         """
+        if x.ndim != 4:
+            raise ValueError('Expected input to a 4D tensor')
+        if x.shape[1] != 1 or x.shape[2] != 28 or x.shape[3] != 28:
+            raise ValueError('Expected each sample to have shape [1, 28, 28]')
         return self.classifier(self.backbone(x))
 
 
