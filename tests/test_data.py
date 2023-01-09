@@ -12,8 +12,8 @@ import pytest
 @pytest.mark.skipif(not os.path.exists("data/raw"), reason="Data files not found")
 def load_data():
     # dataset = MNIST
-    train_set = CorruptMnist(train=True, in_folder="data/raw", out_folder="data/processed")
-    test_set = CorruptMnist(train=False, in_folder="data/raw", out_folder="data/processed")
+    train_set = CorruptMnist(train=True, in_folder="data/raw", out_folder=None)
+    test_set = CorruptMnist(train=False, in_folder="data/raw", out_folder=None)
     return train_set, test_set
 
 @pytest.mark.skipif(not os.path.exists("data/raw"), reason="Data files not found")
