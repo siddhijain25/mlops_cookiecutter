@@ -2,7 +2,6 @@
 import logging
 import os
 import shutil
-from pathlib import Path
 from typing import Tuple
 
 import click
@@ -35,9 +34,7 @@ class CorruptMnist(Dataset):
             content = []
             for i in range(8):
                 content.append(np.load(f"{in_folder}/train_{i}.npz", allow_pickle=True))
-            data = torch.tensor(np.concatenate([c["images"] for c in content])).reshape(
-                -1, 1, 28, 28
-            )
+            data = torch.tensor(np.concatenate([c["images"] for c in content])).reshape(-1, 1, 28, 28)
             targets = torch.tensor(np.concatenate([c["labels"] for c in content]))
         else:
             content = np.load(f"{in_folder}/test.npz", allow_pickle=True)
@@ -77,9 +74,7 @@ class CorruptMnist(Dataset):
                     shutil.move(f"train_{file_idx}.npz", f"{self.in_folder}/train_{file_idx}.npz")
         else:
             if "test.npz" not in files:
-                wget.download(
-                    "https://raw.githubusercontent.com/SkafteNicki/dtu_mlops/main/data/corruptmnist/test.npz"
-                )
+                wget.download("https://raw.githubusercontent.com/SkafteNicki/dtu_mlops/main/data/corruptmnist/test.npz")
                 shutil.move("test.npz", f"{self.in_folder}/test.npz")
 
     def __len__(self) -> int:

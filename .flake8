@@ -6,4 +6,4 @@
 
 [flake8]
 max-line-length = 130
-ignore = E722
+ignore = E722, E231

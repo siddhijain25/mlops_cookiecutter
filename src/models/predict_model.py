@@ -1,10 +1,10 @@
-# # such that it takes a pre-trained model file and creates prediction for some data. 
-# # Recommended interface is that users can give this file either a folder with raw images 
+# # such that it takes a pre-trained model file and creates prediction for some data.
+# # Recommended interface is that users can give this file either a folder with raw images
 # # that gets loaded in or a numpy or pickle file with already loaded images e.g. something like this
 
-# # python src/models/predict_model.py 
+# # python src/models/predict_model.py
 # python src/models/trained_model.pt   # file containing a pretrained model
-# data/example_images.npz 
+# data/example_images.npz
 
 import argparse
 
@@ -28,7 +28,9 @@ def predict() -> None:
     model = model.to(device)
 
     imgs = np.load(args.data_to_predict)
-    imgs = torch.tensor(imgs['images'].reshape(-1, 1, 28, 28), dtype=torch.float, device=device) # need to load only images and not labels
+    imgs = torch.tensor(
+        imgs["images"].reshape(-1, 1, 28, 28), dtype=torch.float, device=device
+    )  # need to load only images and not labels
 
     log_probs = model(imgs)
     prediction = log_probs.argmax(dim=-1)

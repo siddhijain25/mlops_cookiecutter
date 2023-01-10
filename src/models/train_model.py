@@ -40,7 +40,7 @@ def training() -> None:
     plt.plot(loss_tracker, "-")
     plt.xlabel("Training step")
     plt.ylabel("Training loss")
-    plt.savefig(f"reports/figures/training_curve.png")
+    plt.savefig("reports/figures/training_curve.png")
 
 
 if __name__ == "__main__":
