@@ -27,7 +27,7 @@ jobs:
       id: pip-cache	
       run: |	
         echo "::set-output name=dir::$(pip cache dir)"	
-        
+
     - name: Cache dependencies	
       uses: actions/cache@v3	
       with:	
@@ -68,4 +68,4 @@ jobs:
     - name: pep8 compliance with flake8
       run: |
         pip install flake8
-        flake8 .
+        flake8 . --config .flake8
